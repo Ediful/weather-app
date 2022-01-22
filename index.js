@@ -46,7 +46,7 @@ async function getWeatherData() {
     document.getElementById('weather-info').classList.add('loading');
 
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${search.value}&APPID=d167055762f8de3624cba9e9eec8fb30`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${search.value}&APPID=d167055762f8de3624cba9e9eec8fb30`,
       { mode: 'cors' }
     );
 
