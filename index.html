@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Weather App</title>
+    <link rel="icon" href="sun-icon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,21 +13,24 @@
         <input type="text" value="London" />
         <input type="button" value="Search" />
       </div>
-      <div class="col">
-        <img id="icon-image" src="" alt="weather icon" />
-        <div id="desc"></div>
-      </div>
+      <div id="weather-info">
+        <div class="col">
+          <img id="icon-image" src="" alt="weather icon" />
+          <div id="desc"></div>
+        </div>
 
-      <div class="col">
-        <div id="location"></div>
-        <div id="temp"></div>
+        <div class="col">
+          <div id="location"></div>
+          <div id="temp"></div>
 
-        <div id="humidity"></div>
-        <div id="wind-speed"></div>
-        <label for="imperial">Imperial?</label>
-        <input type="checkbox" id="imperial" />
+          <div id="humidity"></div>
+          <div id="wind-speed"></div>
+          <label for="imperial">Imperial?</label>
+          <input type="checkbox" id="imperial" />
+        </div>
       </div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>

@@ -60,3 +60,8 @@ input[type='checkbox'] {
   justify-content: center;
   color: red;
 }
+
+.loading {
+  size: 0;
+  transition: opacity 0.1s linear;
+}
