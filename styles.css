@@ -1,0 +1,56 @@
+body {
+  background-color: #426a5a;
+  font-size: 1.5em;
+}
+
+#content {
+  margin: 3em auto;
+  width: fit-content;
+  border: thin solid black;
+  border-radius: 10px;
+  background-color: #ddd;
+  color: #13293d;
+  padding: 1em;
+}
+
+.col {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#search {
+  margin: 0.5em 1em;
+}
+
+#search input[type='text'] {
+  font-size: 0.75em;
+  max-width: 10em;
+}
+
+#search input[type='button'] {
+  font-size: 0.75em;
+}
+
+#desc {
+  color: #555;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+#humidity {
+  color: #555;
+  font-size: 0.75em;
+}
+
+#wind-speed {
+  color: #555;
+  font-size: 0.75em;
+}
+
+label {
+  font-size: 0.75em;
+}
+
+input[type='checkbox'] {
+  transform: scale(1.5);
+}
