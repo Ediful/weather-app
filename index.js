@@ -43,13 +43,16 @@ async function getWeatherData() {
   try {
     const search = document.querySelector("input[type='text'");
 
-    // check for comma separated fields
-    console.log(search.value.split(', '));
-
     const response = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${search.value}&APPID=d167055762f8de3624cba9e9eec8fb30`,
       { mode: 'cors' }
     );
+
+    if (!response.ok) {
+      throw new Error(`Location not found!`);
+    }
+
+    document.getElementById('error-readout').textContent = '';
 
     const openWeatherData = await response.json();
 
@@ -60,8 +63,8 @@ async function getWeatherData() {
     weather.humidity = openWeatherData.main.humidity;
     weather.windSpeed = openWeatherData.wind.speed;
     displayWeather();
-  } catch {
-    console.log('woops');
+  } catch (error) {
+    document.getElementById('error-readout').textContent = error;
   }
 }
 

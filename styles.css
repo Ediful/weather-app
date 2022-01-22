@@ -54,3 +54,9 @@ label {
 input[type='checkbox'] {
   transform: scale(1.5);
 }
+
+#error-readout {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
