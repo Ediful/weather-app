@@ -18,10 +18,10 @@ function handleTemp(tempK) {
 
 function handleWindSpeed(windSpeed) {
   if (!document.querySelector('input[type=checkbox').checked) {
-    return `${Math.round(windSpeed * 3.6)} km/h`;
+    return `Wind Speed ${Math.round(windSpeed * 3.6)} km/h`;
   }
 
-  return `${Math.round(windSpeed * 2.237)} mi/h`;
+  return `Wind Speed ${Math.round(windSpeed * 2.237)} mi/h`;
 }
 
 function displayWeather() {
@@ -60,7 +60,7 @@ async function getWeatherData() {
     const openWeatherData = await response.json();
 
     weather.temp = openWeatherData.main.temp;
-    weather.location = search.value;
+    weather.location = openWeatherData.name;
     weather.desc = openWeatherData.weather[0].description;
     weather.icon = openWeatherData.weather[0].icon;
     weather.humidity = openWeatherData.main.humidity;
@@ -79,6 +79,12 @@ document.querySelector('input[type=checkbox').addEventListener('click', () => {
     weather.windSpeed
   );
 });
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    document.querySelector('input[type=button').click();
+  }
+})
 
 document
   .querySelector('input[type=button]')
